@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navnvfvfvfvff"
+    app:startDestination="@id/chooseFragment">
+
+    <fragment
+        android:id="@+id/velcooomeFragment"
+        android:name="com.trophymanager.pro.VelcooomeFragment"
+        android:label="fragment_velcooome"
+        tools:layout="@layout/fragment_velcooome" >
+        <action
+            android:id="@+id/action_velcooomeFragment_to_loadingFragment"
+            app:destination="@id/loadingFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_velcooomeFragment_to_helpFragment"
+            app:destination="@id/helpFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_velcooomeFragment_to_rulesFragment"
+            app:destination="@id/rulesFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.trophymanager.pro.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_velcooomeFragment"
+            app:destination="@id/velcooomeFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="com.trophymanager.pro.LoadingFragment"
+        android:label="fragment_loading"
+        tools:layout="@layout/fragment_loading" >
+        <action
+            android:id="@+id/action_loadingFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.trophymanager.pro.HelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_help" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="com.trophymanager.pro.RulesFragment"
+        android:label="fragment_rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/chooseFragment"
+        android:name="com.trophymanager.pro.ChooseFragment"
+        android:label="fragment_choose"
+        tools:layout="@layout/fragment_choose" >
+        <action
+            android:id="@+id/action_chooseFragment_to_vheelFragment"
+            app:destination="@id/vheelFragment" />
+        <action
+            android:id="@+id/action_chooseFragment_to_velcooomeFragment"
+            app:destination="@id/velcooomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vheelFragment"
+        android:name="com.trophymanager.pro.VheelFragment"
+        android:label="fragment_vheel"
+        tools:layout="@layout/fragment_vheel" />
+</navigation>
